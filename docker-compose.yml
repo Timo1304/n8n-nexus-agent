@@ -22,7 +22,7 @@ services:
       postgres:
         condition: service_healthy
     ports:
-      -
+      -"5678:5678"
     environment:
       # Timezone
       TZ: ${TZ}
