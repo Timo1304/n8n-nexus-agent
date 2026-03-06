@@ -53,16 +53,6 @@ services:
     volumes:
       - n8n_data:/home/node/.n8n
 
-    caddy:
-        image: caddy:2
-        restart: unless-stopped
-        ports:
-            - "80:80"
-            - "443:443"
-        volumes:
-            - ./Caddyfile:/etc/caddy/Caddyfile
-            - caddy_data:/data
-            - caddy_config:/config
 
 volumes:
   postgres_data:
